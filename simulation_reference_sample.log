@@ -1,0 +1,61 @@
+This is a sample log of the simulation activity as produced using the functions in the restaurant_log.c code
+
+
+TUID=tuf12345 CUSTOMERS=5 TABLES=3 WAITERS=2 CHEFS=2
+[T+00.001] [SIM     ] simulation started
+[T+00.003] [CUSTOMER] cid=0 state=ARRIVING customer 0 arrived
+[T+00.004] [CUSTOMER] cid=1 state=ARRIVING customer 1 arrived
+[T+00.005] [CUSTOMER] cid=0 state=QUEUED customer 0 joined waiting queue
+[T+00.006] [CUSTOMER] cid=1 state=QUEUED customer 1 joined waiting queue
+[T+00.007] [CUSTOMER] cid=2 state=ARRIVING customer 2 arrived
+[T+00.008] [CUSTOMER] cid=2 state=QUEUED customer 2 joined waiting queue
+[T+00.010] [WAITER  ] wid=0 cid=0 load=1 waiter 0 seated customer 0
+[T+00.011] [CUSTOMER] cid=0 state=SEATED tid=0 customer 0 seated at table 0
+[T+00.012] [WAITER  ] wid=1 cid=1 load=1 waiter 1 seated customer 1
+[T+00.013] [CUSTOMER] cid=1 state=SEATED tid=1 customer 1 seated at table 1
+[T+00.014] [WAITER  ] wid=0 cid=2 load=2 waiter 0 seated customer 2
+[T+00.015] [CUSTOMER] cid=2 state=SEATED tid=2 customer 2 seated at table 2
+[T+00.016] [CUSTOMER] cid=3 state=ARRIVING customer 3 arrived
+[T+00.017] [CUSTOMER] cid=3 state=QUEUED customer 3 joined waiting queue
+[T+00.020] [CUSTOMER] cid=0 state=ORDERING customer 0 placed order
+[T+00.021] [WAITER  ] wid=0 cid=0 item=BURGER qlen=1 order placed
+[T+00.022] [CUSTOMER] cid=1 state=ORDERING customer 1 placed order
+[T+00.023] [WAITER  ] wid=1 cid=1 item=PASTA qlen=2 order placed
+[T+00.024] [CUSTOMER] cid=2 state=ORDERING customer 2 placed order
+[T+00.025] [WAITER  ] wid=0 cid=2 item=SALAD qlen=3 order placed
+[T+00.026] [CUSTOMER] cid=0 state=WAITING_FOR_MEAL customer 0 waiting for meal
+[T+00.027] [CUSTOMER] cid=1 state=WAITING_FOR_MEAL customer 1 waiting for meal
+[T+00.028] [CUSTOMER] cid=2 state=WAITING_FOR_MEAL customer 2 waiting for meal
+[T+00.410] [CHEF    ] chid=0 cid=0 item=BURGER meal ready
+[T+00.411] [CUSTOMER] cid=0 state=EATING customer 0 received meal
+[T+00.420] [CHEF    ] chid=1 cid=1 item=PASTA meal ready
+[T+00.421] [CUSTOMER] cid=1 state=EATING customer 1 received meal
+[T+00.500] [CHEF    ] chid=0 cid=2 item=SALAD meal ready
+[T+00.501] [CUSTOMER] cid=2 state=EATING customer 2 received meal
+[T+00.620] [CUSTOMER] cid=4 state=ARRIVING customer 4 arrived
+[T+00.621] [CUSTOMER] cid=4 state=QUEUED customer 4 joined waiting queue
+[T+01.100] [CUSTOMER] cid=0 state=LEAVING customer 0 leaving
+[T+01.101] [WAITER  ] wid=0 cid=0 load=1 waiter released customer
+[T+01.102] [WAITER  ] wid=1 cid=3 load=2 waiter 1 seated customer 3
+[T+01.103] [CUSTOMER] cid=3 state=SEATED tid=0 customer 3 seated at table 0
+[T+01.200] [CUSTOMER] cid=1 state=LEAVING customer 1 leaving
+[T+01.201] [WAITER  ] wid=1 cid=1 load=1 waiter released customer
+[T+01.202] [WAITER  ] wid=0 cid=4 load=2 waiter 0 seated customer 4
+[T+01.203] [CUSTOMER] cid=4 state=SEATED tid=1 customer 4 seated at table 1
+[T+01.300] [CUSTOMER] cid=3 state=ORDERING customer 3 placed order
+[T+01.301] [WAITER  ] wid=1 cid=3 item=STEAK qlen=1 order placed
+[T+01.302] [CUSTOMER] cid=3 state=WAITING_FOR_MEAL customer 3 waiting for meal
+[T+01.310] [CUSTOMER] cid=4 state=ORDERING customer 4 placed order
+[T+01.311] [WAITER  ] wid=0 cid=4 item=SOUP qlen=2 order placed
+[T+01.312] [CUSTOMER] cid=4 state=WAITING_FOR_MEAL customer 4 waiting for meal
+[T+01.400] [CUSTOMER] cid=2 state=LEAVING customer 2 leaving
+[T+01.401] [WAITER  ] wid=0 cid=2 load=1 waiter released customer
+[T+01.810] [CHEF    ] chid=1 cid=3 item=STEAK meal ready
+[T+01.811] [CUSTOMER] cid=3 state=EATING customer 3 received meal
+[T+01.900] [CHEF    ] chid=0 cid=4 item=SOUP meal ready
+[T+01.901] [CUSTOMER] cid=4 state=EATING customer 4 received meal
+[T+02.500] [CUSTOMER] cid=3 state=LEAVING customer 3 leaving
+[T+02.501] [WAITER  ] wid=1 cid=3 load=0 waiter released customer
+[T+02.600] [CUSTOMER] cid=4 state=LEAVING customer 4 leaving
+[T+02.601] [WAITER  ] wid=0 cid=4 load=0 waiter released customer
+[T+02.620] [SIM     ] DONE total_served=5
